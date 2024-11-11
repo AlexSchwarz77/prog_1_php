@@ -11,8 +11,11 @@
     <?php
         require_once("../inc/conn.php");
 
+        // SELECT gibt Daten aus einer Datenbank wieder
         $ausgabe = "SELECT * FROM kunden";
 
+        // Mit einer Foreach-Schleife kann man über das Ergebnis eines Queries "laufen"
+        // Um die Daten anzuzeigen
         foreach($conn->query($ausgabe) as $row){
             echo "<p>";
             echo $row["name"]. "  <br>";
